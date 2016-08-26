@@ -1,0 +1,28 @@
+# tac_plus.log is handled by rsyslog
+"/var/log/tac_plus.log" {
+	rotate 365
+	daily
+#	olddir /var/log/tac_plus_log_archive/
+	compress
+	missingok
+	dateext
+	notifempty
+	delaycompress
+	postrotate
+    	service rsyslog restart > /dev/null 2>&1 || true
+	endscript
+}
+
+"/var/log/tacacs.log" {
+	rotate 365
+	daily
+#	olddir /var/log/tacacs_log_archive/
+	compress
+	missingok
+	dateext
+	notifempty
+	delaycompress
+	postrotate
+    	service tacacs_plus restart > /dev/null 2>&1 || true
+	endscript
+}
