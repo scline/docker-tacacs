@@ -19,7 +19,7 @@ RUN touch /var/log/tacacs_accounting.log
 
 # Cleanup
 RUN apt-get -y clean && \
-	rm -rf /var/lib/apt/lists/* && rm /scripts/*.sh
+	rm -rf /var/lib/apt/lists/*
 
 # Tacacs
 EXPOSE 49
