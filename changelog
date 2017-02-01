@@ -1,0 +1,8 @@
+# Version 1.1 - Feb 1, 2017
+ - Removed external syslog target. Will be having docker do this in future release
+ - Updated log file location and rsyslog settings
+ - Updated logrotate settings
+ - Adding version file to repo
+
+# Version 1.0 - Aug 25, 2016
+ - Initial deploy
